@@ -9,8 +9,7 @@ Python script to parse Cassandra table data to CSV
 # Setting up
 Installing dependencies on RHEL based Linux:
 ```bash
-sudo yum install python27 python27-devel 
-sudo yum install python-pip
+sudo yum install python27 python27-devel python-pip
 pip install cassandra-driver
 ```
 
