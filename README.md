@@ -15,5 +15,5 @@ pip install cassandra-driver
 
 ## Running the script
 ```bash
-python cassandra_to_csv.py keyspace table
+python cassandra_to_csv.py keyspace table file-path
 ```
