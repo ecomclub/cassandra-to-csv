@@ -18,6 +18,7 @@ session.execute(use +keyspace)
 #define head
 
 head=[]
+
 row=session.execute(
     """
     SELECT * FROM system_schema.columns  WHERE keyspace_name = %s AND table_name =%s
@@ -25,11 +26,24 @@ row=session.execute(
     (keyspace,arg)
 )
 
+
+for i in row:
+        head.append(i[2])
+
+
+
+result = ', '.join(head)
+
+teste=str(result)
+
+
+res="SELECT " +"".join(teste)+" FROM "
+
 # data recovery
 
-select='SELECT * FROM '
 
-coluna=session.execute(select +arg)
+coluna=session.execute(res +arg)
+
 
 
 # csv data conversion
