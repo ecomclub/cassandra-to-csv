@@ -30,19 +30,18 @@ row=session.execute(
 for i in row:
         head.append(i[2])
 
-
+# convert list in string
 
 result = ', '.join(head)
+convert=str(result)
 
-teste=str(result)
 
-
-res="SELECT " +"".join(teste)+" FROM "
+query="SELECT " +"".join(convert)+" FROM "
 
 # data recovery
 
 
-coluna=session.execute(res +arg)
+column=session.execute(query +arg)
 
 
 
@@ -54,5 +53,5 @@ with open(sys.argv[3], 'wb') as csvfile:
     for i in row:
         head.append(i[2])
     filewriter.writerow(head)
-    for i in coluna:
+    for i in column:
         filewriter.writerow(i)
