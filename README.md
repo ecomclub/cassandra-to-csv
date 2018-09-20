@@ -1,19 +1,11 @@
 # cassandra-to-csv
-Python script to parse Cassandra table data to CSV
+Shel script to import and export Cassandra table data to CSV
 
-# Technology stack
-+ [Python 2](https://www.python.org/downloads/release/python-2715/) 
-+ [PIP](https://pypi.org/project/pip/)
-+ [Casandra drive](https://datastax.github.io/python-driver/) 
-
-# Setting up
-Installing dependencies on RHEL based Linux:
+## Running the script Export
 ```bash
-sudo yum install python27 python27-devel python-pip
-pip install cassandra-driver
+sh cassandra_csv.sh keyspace table file_path import
 ```
-
-## Running the script
+## Running the script Import
 ```bash
-python cassandra_to_csv.py keyspace table file-path
+sh cassandra_csv.sh keyspace table file_path 
 ```
