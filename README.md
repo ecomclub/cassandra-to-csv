@@ -1,11 +1,12 @@
 # cassandra-to-csv
-Shel script to import and export Cassandra table data to CSV
+Shell script to import and export Cassandra table data to CSV
 
-## Running the script Export
+### Export from Cassandra to CSV
 ```bash
-sh cassandra_csv.sh keyspace table file_path 
+sh cqlcsv.sh keyspace table filepath 
 ```
-## Running the script Import
+
+### Import from CSV to Cassandra
 ```bash
-sh cassandra_csv.sh keyspace table file_path import
+sh cqlcsv.sh keyspace table filepath import
 ```
